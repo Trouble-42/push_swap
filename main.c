@@ -6,23 +6,77 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 11:18:14 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/19 11:52:55 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/19 19:33:34 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "ft_push_swap.h"
 
-int	main(void)
+t_pile	*ft_pilenew(int value)
 {
-	int i = 0;
-	int a[] = {4, 14, 2, 38, 5};
-	int size = 5;
-	ft_sa(a);
-	while (i < size)
+	t_pile	*start;
+
+	start = malloc(sizeof(t_pile));
+	if (!start)
+		return (NULL);
+	start->value = value;
+	start->next = NULL;
+	return (start);
+}
+
+void	ft_pileadd_back(t_pile **a, t_pile *new)
+{
+	t_pile *ptr;
+
+	if (!a || !new)
+		return ;
+	if (!*a)
 	{
-		printf("%d\n", a[i]);
+		*a = new;
+		return ;
+	}
+	ptr = *a;
+	while (ptr->next != NULL)
+		ptr = ptr->next;
+	ptr->next = new;
+}
+
+int	main(int argc, char **argv)
+{
+	t_pile *a;
+	t_pile *b;
+	t_pile *ptr;
+	int	i;
+
+	a = NULL;
+	b = NULL;
+	i = 1;
+	while (i < argc)
+	{
+		ft_pileadd_back(&a, ft_pilenew(ft_atoi(argv[i])));
 		i++;
+	}
+	ptr = a;
+	while (ptr)
+	{
+		ft_printf("%d\n", ptr->value);
+		ptr = ptr->next;
+	}
+	ft_printf("--\n");
+	ft_push(&b, &a);
+	ptr = a;
+	while (ptr)
+	{
+		ft_printf("%d\n", ptr->value);
+		ptr = ptr->next;
+	}
+	ft_printf("--\n");
+	ptr = b;
+	while (ptr)
+	{
+		ft_printf("%d\n", ptr->value);
+		ptr = ptr->next;
 	}
 	return (0);
 }

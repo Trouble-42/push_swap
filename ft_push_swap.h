@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 11:10:20 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/20 15:29:56 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/20 19:26:37 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 typedef struct	s_pile_swap
 {
-	int	value;
-	struct s_pile_swap *next;
+	int					value;
+	struct s_pile_swap	*next;
 }	t_pile;
 
 int		ft_atoi(const char *nptr);
@@ -40,5 +40,6 @@ void	ft_reverse_rotate(t_pile **a);
 void	rra(t_pile **a);
 void	rrb(t_pile **b);
 void	rrr(t_pile **a, t_pile **b);
+int		ft_is_sorted(t_pile *a);
 
 #endif

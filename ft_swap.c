@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 11:27:13 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/19 19:23:36 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/20 15:18:56 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,23 @@ void	ft_swap(t_pile **a)
 	tmp = (*a)->value;
 	(*a)->value = (*a)->next->value;
 	(*a)->next->value = tmp;
+}
+
+void	sa(t_pile **a)
+{
+	ft_swap(a);
+	write(1, "sa\n", 3);
+}
+
+void	sb(t_pile **b)
+{
+	ft_swap(b);
+	write(1, "sb\n", 3);
+}
+
+void	ss(t_pile **a, t_pile **b)
+{
+	ft_swap(a);
+	ft_swap(b);
+	write(1, "ss\n", 3);
 }

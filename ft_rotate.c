@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 15:13:27 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/19 16:45:15 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/20 15:26:45 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,23 @@ void	ft_rotate(t_pile **a)
 	rotate->next = *a;
 	(*a)->next = NULL;
 	*a = tmp;
+}
+
+void	ra(t_pile **a)
+{
+	ft_rotate(a);
+	write(1, "ra\n", 3);
+}
+
+void	rb(t_pile **b)
+{
+	ft_rotate(b);
+	write(1, "rb\n", 3);
+}
+
+void	rr(t_pile **a, t_pile **b)
+{
+	ft_rotate(a);
+	ft_rotate(b);
+	write(1, "rr\n", 3);
 }

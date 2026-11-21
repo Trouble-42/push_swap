@@ -6,14 +6,14 @@
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/21 15:16:08 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/21 15:16:40 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/21 15:50:17 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct s_stack
+/*typedef struct s_stack
 {
 	int				value;
 	int				index;
@@ -57,7 +57,7 @@ int	stack_size(t_stack *s)
 		s = s->next;
 	}
 	return (i);
-}
+}*/
 
 void	print_stack(char *name, t_stack *s)
 {
@@ -72,7 +72,7 @@ void	print_stack(char *name, t_stack *s)
 
 /* OPERATIONS */
 
-void	pb(t_stack **a, t_stack **b)
+/*void	pb(t_stack **a, t_stack **b)
 {
 	t_stack	*tmp;
 
@@ -139,7 +139,7 @@ void	rra(t_stack **a)
 void	rrb(t_stack **b)
 {
 	rra(b);
-}
+}*/
 
 /* CHUNK SORT */
 
@@ -256,7 +256,7 @@ void	sort_big(t_stack **a, t_stack **b)
 	push_to_a(a, b);
 }
 
-int	is_sorted(t_stack *a)
+/*int	is_sorted(t_stack *a)
 {
 	while (a && a->next)
 	{
@@ -265,7 +265,7 @@ int	is_sorted(t_stack *a)
 		a = a->next;
 	}
 	return (1);
-}
+}*/
 
 int	main(void)
 {

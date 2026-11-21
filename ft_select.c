@@ -6,9 +6,11 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 13:37:00 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/21 14:29:12 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 16:13:52 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_push_swap.h"
 
 int	ft_pos_select(t_pile *a, int i)
 {
@@ -38,7 +40,7 @@ void	ft_select(t_pile **a, t_pile **b)
 		z = ft_pos_select(*a, i);
 		while ((*a)->rank != i)
 		{
-			if (z < ft_pilenew(*a) / 2)
+			if (z < ft_pilelen(*a) / 2)
 				ra(a);
 			else
 				rra(a);

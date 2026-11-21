@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 09:32:48 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/14 17:28:25 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 16:52:29 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	ft_putunsignednbr(unsigned int nb)
 	if (nb > 9)
 		i += ft_putunsignednbr(nb / 10);
 	c = nb % 10 + '0';
-	i += write(1, &c, 1);
+	i += write(2, &c, 1);
 	return (i);
 }

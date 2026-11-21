@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 12:51:05 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/21 15:23:49 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 18:03:35 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,12 @@ void	pa(t_pile **b, t_pile **a)
 {
 	ft_push(a, b);
 	write(1, "pa\n", 3);
+	ft_count(C_PA, 1);
 }
 
 void	pb(t_pile **a, t_pile **b)
 {
 	ft_push(b, a);
 	write(1, "pb\n", 3);
+	ft_count(C_PB, 1);
 }

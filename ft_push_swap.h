@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 11:10:20 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/21 15:22:34 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 18:45:41 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "ft_printf/ft_printf.h"
+
+# define C_SA 0
+# define C_SB 1
+# define C_SS 2
+# define C_PA 3
+# define C_PB 4
+# define C_RA 5
+# define C_RB 6
+# define C_RR 7
+# define C_RRA 8
+# define C_RRB 9
+# define C_RRR 10
 
 typedef struct s_pile_swap
 {
@@ -46,5 +58,9 @@ void	ft_rank(t_pile *a);
 int		ft_pos_select(t_pile *a, int i);
 void	ft_select(t_pile **a, t_pile **b);
 void	ft_radix(t_pile **a, t_pile **b);
+long	ft_disorder(t_pile *a, int nb);
+void	ft_print_rate(t_pile *a, int nb);
+int		ft_count(int op, int inc);
+void	print_count(void);
 
 #endif

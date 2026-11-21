@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 11:40:03 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/14 16:55:12 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 16:50:46 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	putnbrhexa(unsigned long nb)
 	if (nb >= 16)
 		i += putnbrhexa(nb / 16);
 	u = nb % 16;
-	i += write(1, base + u, 1);
+	i += write(2, base + u, 1);
 	return (i);
 }
 
@@ -34,9 +34,9 @@ int	ft_address(void *address)
 
 	i = 0;
 	if (!address)
-		return (write(1, "(nil)", 5));
+		return (write(2, "(nil)", 5));
 	value = (unsigned long)address;
-	write(1, "0x", 2);
+	write(2, "0x", 2);
 	i = putnbrhexa(value);
 	return (i + 2);
 }

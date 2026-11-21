@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 09:24:16 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/14 17:03:10 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 16:52:19 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	ft_putstr_c(char *s)
 
 	i = 0;
 	if (!s)
-		return (write(1, "(null)", 6));
+		return (write(2, "(null)", 6));
 	while (s[i] != '\0')
 	{
-		write(1, &s[i], 1);
+		write(2, &s[i], 1);
 		i++;
 	}
 	return (i);

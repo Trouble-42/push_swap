@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 18:04:52 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/15 10:05:27 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 16:51:13 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_dispatch(va_list *ap, char c)
 	if (c == 'p')
 		return (ft_address(va_arg(*ap, void *)));
 	if (c == '%')
-		return (write(1, "%", 1));
+		return (write(2, "%", 1));
 	return (0);
 }
 

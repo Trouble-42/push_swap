@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 11:38:26 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/14 17:07:36 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 16:51:57 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_putnbrhexacaps(unsigned int nb)
 	if (nb >= 16)
 		i += ft_putnbrhexacaps(nb / 16);
 	u = nb % 16;
-	i += write(1, base + u, 1);
+	i += write(2, base + u, 1);
 	return (i);
 }
 

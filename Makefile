@@ -3,7 +3,8 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = push_swap
 
 SRCS = ft_atoi.c			\
-	   ft_chunk.c			\
+	   ft_count.c			\
+	   ft_disorder.c		\
 	   ft_is_sorted.c		\
 	   ft_pilelen.c			\
 	   ft_push.c			\

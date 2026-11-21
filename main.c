@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 11:18:14 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/21 12:18:49 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 18:46:49 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	ft_rank(a);
+	ft_print_rate(a, ft_pilelen(a));
 	ptr = a;
 	while (ptr)
 	{
@@ -66,7 +67,7 @@ int	main(int argc, char **argv)
 		ptr = ptr->next;
 	}
 	ft_printf("--\n");
-	ft_radix(&a, &b);
+	ft_select(&a, &b);
 	ptr = a;
 	while (ptr)
 	{
@@ -80,5 +81,6 @@ int	main(int argc, char **argv)
 		ft_printf("%d\n", ptr->value);
 		ptr = ptr->next;
 	}
+	print_count();
 	return (0);
 }

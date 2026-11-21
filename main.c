@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 11:18:14 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/19 19:33:34 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 12:18:49 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_pile	*ft_pilenew(int value)
 	if (!start)
 		return (NULL);
 	start->value = value;
+	start->rank = 0;
 	start->next = NULL;
 	return (start);
 }
@@ -57,18 +58,19 @@ int	main(int argc, char **argv)
 		ft_pileadd_back(&a, ft_pilenew(ft_atoi(argv[i])));
 		i++;
 	}
+	ft_rank(a);
 	ptr = a;
 	while (ptr)
 	{
-		ft_printf("%d\n", ptr->value);
+		ft_printf("%d | %d\n", ptr->value, ptr->rank);
 		ptr = ptr->next;
 	}
 	ft_printf("--\n");
-	ft_push(&b, &a);
+	ft_radix(&a, &b);
 	ptr = a;
 	while (ptr)
 	{
-		ft_printf("%d\n", ptr->value);
+		ft_printf("%d | %d\n", ptr->value, ptr->rank);
 		ptr = ptr->next;
 	}
 	ft_printf("--\n");

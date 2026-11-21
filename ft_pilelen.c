@@ -6,9 +6,11 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 19:54:34 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/20 19:59:23 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 10:39:31 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_push_swap.h"
 
 int	ft_pilelen(t_pile *a)
 {

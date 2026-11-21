@@ -2,10 +2,16 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 NAME = push_swap
 
-SRCS = ft_atoic.c			\
+SRCS = ft_atoi.c			\
+	   ft_chunk.c			\
+	   ft_is_sorted.c		\
+	   ft_pilelen.c			\
 	   ft_push.c			\
+	   ft_radix.c			\
+	   ft_rank.c			\
 	   ft_reverse_rotate.c	\
 	   ft_rotate.c			\
+	   ft_select.c			\
 	   ft_swap.c			\
 	   main.c
 

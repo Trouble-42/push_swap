@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 11:10:20 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/20 19:26:37 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 15:22:34 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-#include "ft_printf/ft_printf.h"
+# include "ft_printf/ft_printf.h"
 
-typedef struct	s_pile_swap
+typedef struct s_pile_swap
 {
 	int					value;
+	int					rank;
 	struct s_pile_swap	*next;
 }	t_pile;
 
 int		ft_atoi(const char *nptr);
-int		*convert_argc(char **argv, int argc);
+int		ft_pilelen(t_pile *a);
 void	ft_swap(t_pile **a);
 void	sa(t_pile **a);
 void	sb(t_pile **b);
@@ -41,5 +42,9 @@ void	rra(t_pile **a);
 void	rrb(t_pile **b);
 void	rrr(t_pile **a, t_pile **b);
 int		ft_is_sorted(t_pile *a);
+void	ft_rank(t_pile *a);
+int		ft_pos_select(t_pile *a, int i);
+void	ft_select(t_pile **a, t_pile **b);
+void	ft_radix(t_pile **a, t_pile **b);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 15:13:27 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/20 15:26:45 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/21 15:24:02 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_rotate(t_pile **a)
 {
-	t_pile *rotate;
-	t_pile *tmp;
+	t_pile	*rotate;
+	t_pile	*tmp;
 
 	if (!*a || !(*a)->next)
 		return ;

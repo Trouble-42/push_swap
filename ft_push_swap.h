@@ -6,7 +6,7 @@
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/19 11:10:20 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/23 13:26:38 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/23 14:46:33 by rkraan          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # define C_RRB 9
 # define C_RRR 10
 # define DISORDER_LOW 2000
-# define DISORDER_HIGH 3000
+# define DISORDER_HIGH 5000
 
 typedef struct s_pile_swap
 {

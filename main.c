@@ -6,7 +6,7 @@
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/19 11:18:14 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/23 14:17:03 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/23 15:07:07 by rkraan          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,23 +43,6 @@ void	ft_print_status(t_pile *a, char *title)
 		ft_printf("Sorted: NO\n\n");
 }
 
-int	ft_find_unsorted(t_pile *a)
-{
-	while (a && a->next)
-	{
-		if (a->value > a->next->value)
-		{
-			ft_printf(
-				"Error between %d and %d\n",
-			a->value,
-			a->next->value);
-			return (1);
-		}
-		a = a->next;
-	}
-	return (0);
-}
-
 int	main(int argc, char **argv)
 {
 	t_pile	*a;
@@ -79,7 +62,6 @@ int	main(int argc, char **argv)
 	ft_print_status(a, "BEFORE SORT");
 	ft_sort(&a, &b);
 	ft_print_status(a, "AFTER SORT");
-	ft_find_unsorted(a);
 	ft_pileclear(&a);
 	ft_pileclear(&b);
 	return (0);

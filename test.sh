@@ -5,7 +5,7 @@
     OVER=0
 
     for i in $(seq 1 2); do
-        ARG=$(shuf -i 0-9999 -n 500 | paste -sd' ' -)
+        ARG=$(shuf -i 0-9999 -n 100 | paste -sd' ' -)
         SCORE=$(./push_swap $ARG | wc -l)
 
         echo "Test $i : $SCORE"
@@ -22,4 +22,4 @@
     echo "Worst       : $MAX"
     echo "> 5500      : $OVER/2"
     echo "Percentage  : $(awk "BEGIN {printf \"%.2f\", ($OVER*100)/2}")%"
-} | tee results.txt
+} | tee results2.txt

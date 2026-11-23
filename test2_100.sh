@@ -5,7 +5,7 @@
     OVER=0
 
     for i in $(seq 1 200); do
-        ARG=$(shuf -i 0-9999 -n 500 | paste -sd' ' -)
+        ARG=$(shuf -i 0-9999 -n 100 | paste -sd' ' -)
         SCORE=$(./push_swap $ARG | wc -l)
 
         echo "Test $i : $SCORE"
@@ -13,13 +13,13 @@
         SUM=$((SUM + SCORE))
         [ $SCORE -lt $MIN ] && MIN=$SCORE
         [ $SCORE -gt $MAX ] && MAX=$SCORE
-        [ $SCORE -gt 5500 ] && OVER=$((OVER + 1))
+        [ $SCORE -gt 700 ] && OVER=$((OVER + 1))
     done
 
     echo
     echo "Average     : $(awk "BEGIN {printf \"%.2f\", $SUM/200}")"
     echo "Best        : $MIN"
     echo "Worst       : $MAX"
-    echo "> 5500      : $OVER/200"
+    echo "> 700      : $OVER/200"
     echo "Percentage  : $(awk "BEGIN {printf \"%.2f\", ($OVER*100)/200}")%"
 } | tee results.txt

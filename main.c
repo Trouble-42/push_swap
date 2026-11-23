@@ -1,86 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/19 11:18:14 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/21 18:46:49 by ajeudy           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   main.c                                            :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/11/19 11:18:14 by rkraan           #+#    #+#              */
+/*   Updated: 2026/11/23 13:22:32 by rkraan          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "ft_push_swap.h"
-
-t_pile	*ft_pilenew(int value)
-{
-	t_pile	*start;
-
-	start = malloc(sizeof(t_pile));
-	if (!start)
-		return (NULL);
-	start->value = value;
-	start->rank = 0;
-	start->next = NULL;
-	return (start);
-}
-
-void	ft_pileadd_back(t_pile **a, t_pile *new)
-{
-	t_pile *ptr;
-
-	if (!a || !new)
-		return ;
-	if (!*a)
-	{
-		*a = new;
-		return ;
-	}
-	ptr = *a;
-	while (ptr->next != NULL)
-		ptr = ptr->next;
-	ptr->next = new;
-}
 
 int	main(int argc, char **argv)
 {
-	t_pile *a;
-	t_pile *b;
-	t_pile *ptr;
-	int	i;
+	t_pile	*a;
+	t_pile	*b;
 
+	if (argc < 2)
+		return (0);
 	a = NULL;
 	b = NULL;
-	i = 1;
-	while (i < argc)
+	if (!ft_parse(&a, argc, argv))
 	{
-		ft_pileadd_back(&a, ft_pilenew(ft_atoi(argv[i])));
-		i++;
+		ft_pileclear(&a);
+		write(2, "Error\n", 6);
+		return (1);
 	}
 	ft_rank(a);
-	ft_print_rate(a, ft_pilelen(a));
-	ptr = a;
-	while (ptr)
-	{
-		ft_printf("%d | %d\n", ptr->value, ptr->rank);
-		ptr = ptr->next;
-	}
-	ft_printf("--\n");
-	ft_select(&a, &b);
-	ptr = a;
-	while (ptr)
-	{
-		ft_printf("%d | %d\n", ptr->value, ptr->rank);
-		ptr = ptr->next;
-	}
-	ft_printf("--\n");
-	ptr = b;
-	while (ptr)
-	{
-		ft_printf("%d\n", ptr->value);
-		ptr = ptr->next;
-	}
-	print_count();
+	ft_sort(&a, &b);
+	ft_pileclear(&a);
+	ft_pileclear(&b);
 	return (0);
 }

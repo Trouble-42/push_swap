@@ -14,6 +14,15 @@ SRCS = ft_atoi.c			\
 	   ft_rotate.c			\
 	   ft_select.c			\
 	   ft_swap.c			\
+	   ft_chunk.c			\
+	   ft_chunk_utils.c		\
+	   ft_turk.c			\
+	   ft_turk_utils.c		\
+	   ft_turk_move.c		\
+	   ft_turk_cost.c		\
+	   ft_sort.c 			\
+	   ft_parsing.c			\
+	   ft_pile_utils.c		\
 	   main.c
 
 OBJS = $(SRCS:.c=.o)

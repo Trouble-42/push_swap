@@ -6,11 +6,59 @@
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/19 11:18:14 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/23 13:22:32 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/23 14:17:03 by rkraan          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
+
+void	ft_print_pile(t_pile *pile)
+{
+	t_pile	*tmp;
+
+	tmp = pile;
+	ft_printf("Values: ");
+	while (tmp)
+	{
+		ft_printf("%d ", tmp->value);
+		tmp = tmp->next;
+	}
+	ft_printf("\nRanks : ");
+	tmp = pile;
+	while (tmp)
+	{
+		ft_printf("%d ", tmp->rank);
+		tmp = tmp->next;
+	}
+	ft_printf("\n");
+}
+
+void	ft_print_status(t_pile *a, char *title)
+{
+	ft_printf("=== %s ===\n", title);
+	ft_print_pile(a);
+	if (ft_is_sorted(a))
+		ft_printf("Sorted: YES\n\n");
+	else
+		ft_printf("Sorted: NO\n\n");
+}
+
+int	ft_find_unsorted(t_pile *a)
+{
+	while (a && a->next)
+	{
+		if (a->value > a->next->value)
+		{
+			ft_printf(
+				"Error between %d and %d\n",
+			a->value,
+			a->next->value);
+			return (1);
+		}
+		a = a->next;
+	}
+	return (0);
+}
 
 int	main(int argc, char **argv)
 {
@@ -28,7 +76,10 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	ft_rank(a);
+	ft_print_status(a, "BEFORE SORT");
 	ft_sort(&a, &b);
+	ft_print_status(a, "AFTER SORT");
+	ft_find_unsorted(a);
 	ft_pileclear(&a);
 	ft_pileclear(&b);
 	return (0);

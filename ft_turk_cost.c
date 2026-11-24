@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_turk_cost.c                                    :+:      :+:    :+:    */
+/*   ft_turk_cost.c                                     :+:      :+:    :+:   */
 /*                                                   +:+ +:+         +:+      */
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/23 12:39:31 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/23 12:53:26 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/24 17:13:43 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ int	node_cost(t_pile *a, t_pile *b, int i, int rank)
 	int	j;
 
 	j = ft_pos(b, ft_target_b(b, rank));
-	return (ft_pair_cost(ft_signed(i, ft_pilelen(a)), ft_signed(j, ft_pilelen(b))));
+	return (ft_pair_cost(ft_signed(i, ft_pilelen(a)),
+			ft_signed(j, ft_pilelen(b))));
 }
 
 int	ft_cheapest_a(t_pile *a, t_pile *b)

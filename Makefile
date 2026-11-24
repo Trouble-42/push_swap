@@ -13,6 +13,7 @@ SRCS = ft_atoi.c			\
 	   ft_reverse_rotate.c	\
 	   ft_rotate.c			\
 	   ft_select.c			\
+	   ft_sum_total.c		\
 	   ft_swap.c			\
 	   ft_chunk.c			\
 	   ft_chunk_utils.c		\

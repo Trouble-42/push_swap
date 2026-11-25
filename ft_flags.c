@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_flags.c                                        :+:      :+:    :+:    */
+/*   ft_flags.c                                         :+:      :+:    :+:   */
 /*                                                   +:+ +:+         +:+      */
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/25 08:41:40 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/25 13:08:08 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/25 15:06:14 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	*ft_flags(char **argv, int *algo, int *bench)
 	else if (!ft_strcmp(argv[i], "--bonus"))
 		*algo = 4;
 	i++;
-	return (algo);
+	return (-1);
 }
 
 int	ft_strat(int algo, t_pile **a, t_pile **b)

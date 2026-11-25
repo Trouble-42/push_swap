@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_turk.c                                          :+:      :+:    :+:   */
+/*   ft_turk.c                                         :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/23 12:38:22 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/23 12:38:45 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/25 15:31:57 by rkraan          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,20 @@
 
 void	ft_sort_three(t_pile **a)
 {
+	int	len;
 	int	x;
 	int	y;
 	int	z;
 
+	len = ft_pilelen(*a);
+	if (len < 2)
+		return ;
+	if (len == 2)
+	{
+		if ((*a)->rank > (*a)->next->rank)
+			sa(a);
+		return ;
+	}
 	x = (*a)->rank;
 	y = (*a)->next->rank;
 	z = (*a)->next->next->rank;
@@ -49,6 +59,11 @@ void	push_back(t_pile **a, t_pile **b)
 
 void	ft_turk(t_pile **a, t_pile **b)
 {
+	if (ft_pilelen(*a) <= 3)
+	{
+		ft_sort_three(a);
+		return ;
+	}
 	pb(a, b);
 	if (ft_pilelen(*a) > 3)
 		pb(a, b);

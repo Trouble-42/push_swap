@@ -6,7 +6,7 @@
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/19 11:10:20 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/25 13:09:15 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/25 14:13:42 by rkraan          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int		ft_has_dup(t_pile *a);
 int		ft_parse(t_pile **a, int argc, char **argv);
 void	ft_sort(t_pile **a, t_pile **b);
 int		ft_strcmp(char *s1, char *s2);
-int		*ft_flags(char **argv, int *algo, int *bench);
+int		ft_flags(char **argv, int *algo, int *bench);
 int		ft_strat(int algo, t_pile **a, t_pile **b);
 int		ft_adaptative(t_pile **a, t_pile **b);
 void	ft_bench(t_pile *a, int nb, int algo, int used);

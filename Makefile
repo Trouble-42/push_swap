@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra 
 NAME = push_swap
 
 SRCS = ft_adaptive.c		\

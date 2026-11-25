@@ -6,7 +6,7 @@
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/25 08:41:40 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/25 13:08:08 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/25 14:09:11 by rkraan          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,30 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-int	*ft_flags(char **argv, int *algo, int *bench)
+int	ft_flags(char **argv, int *algo, int *bench)
 {
 	int	i;
 
 	i = 0;
-	if (!ft_strcmp(argv[i], "--bench"))
-		*bench = 1;
-	if (!ft_strcmp(argv[i], "--adaptative"))
-		*algo = 0;
-	else if (!ft_strcmp(argv[i], "--simple"))
-		*algo = 1;
-	else if (!ft_strcmp(argv[i], "--medium"))
-		*algo = 2;
-	else if (!ft_strcmp(argv[i], "--complex"))
-		*algo = 3;
-	else if (!ft_strcmp(argv[i], "--bonus"))
-		*algo = 4;
-	i++;
-	return (algo);
+	while (argv[i] && argv[i][0] == '-' && argv[i][1] == '-')
+	{
+		if (!ft_strcmp(argv[i], "--bench"))
+			*bench = 1;
+		else if (!ft_strcmp(argv[i], "--adaptative"))
+			*algo = 0;
+		else if (!ft_strcmp(argv[i], "--simple"))
+			*algo = 1;
+		else if (!ft_strcmp(argv[i], "--medium"))
+			*algo = 2;
+		else if (!ft_strcmp(argv[i], "--complex"))
+			*algo = 3;
+		else if (!ft_strcmp(argv[i], "--bonus"))
+			*algo = 4;
+		else
+			return (-1);
+		i++;
+	}
+	return (i);
 }
 
 int	ft_strat(int algo, t_pile **a, t_pile **b)

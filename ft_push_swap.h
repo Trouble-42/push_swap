@@ -6,7 +6,7 @@
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/19 11:10:20 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/25 11:24:57 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/25 12:33:17 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,10 @@ int		ft_strcmp(char *s1, char *s2);
 int		ft_flags(char *argv, int *algo, int *bench);
 int		ft_strat(int algo, t_pile **a, t_pile **b);
 int		ft_adaptative(t_pile **a, t_pile **b);
+void	ft_bench(t_pile *a, int nb, int algo, int used);
+int		ft_adaptative(t_pile **a, t_pile **b);
+char	*ft_algo_name(int algo);
+char	*ft_form_name(int used);
+void	ft_print_strat(int algo, int used);
 
 #endif

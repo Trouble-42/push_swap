@@ -6,9 +6,11 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 11:39:00 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/25 12:14:32 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/25 12:32:56 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_push_swap.h"
 
 char	*ft_algo_name(int algo)
 {

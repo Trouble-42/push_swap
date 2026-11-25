@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 09:35:42 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/25 11:24:06 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/25 12:28:52 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_adaptative(t_pile **a, t_pile **b)
 	}
 	else if (order_rate >= 5000 && order_rate <= 10000)
 	{
-		ft_radix(a, b);
+		ft_turk(a, b);
 		start = 3;
 	}
 	return (start);

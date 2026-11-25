@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 08:41:40 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/25 12:15:05 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/25 12:30:35 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_flags(char *argv, int *algo, int *bench)
 		*algo = 2;
 	else if (!ft_strcmp(argv[i], "--complex"))
 		*algo = 3;
-	else if (!ft_strcmp(argv[i], "--excellent"))
+	else if (!ft_strcmp(argv[i], "--radix"))
 		*algo = 4;
 	i++;
 	return (algo);
@@ -49,8 +49,8 @@ int	ft_strat(int algo, t_pile **a, t_pile **b)
 	if (algo == 2)
 		ft_chunk(a, b);
 	if (algo == 3)
-		ft_radix(a, b);
-	if (algo == 4)
 		ft_turk(a, b);
+	if (algo == 4)
+		ft_radix(a, b);
 	return (algo);
 }

@@ -1,0 +1,301 @@
+
+========================================
+ERROR HANDLING
+========================================
+[OK] '1 2 2'
+[OK] '42 42'
+[OK] 'a'
+[OK] '1 a 2'
+[OK] 'hello'
+[OK] '2147483648'
+[OK] '-2147483649'
+[OK] '+'
+[OK] '-'
+[OK] '--1'
+[OK] '++1'
+[OK] '1  2  a'
+[OK] '1a'
+[OK] '2b'
+[OK] '1.5'
+[OK] '3.14'
+[OK] ' '
+
+========================================
+PARSER TORTURE TESTS
+========================================
+[OK] '--'
+[OK] '---'
+[OK] '++++'
+[OK] '----'
+[OK] '+-1'
+[OK] '-+1'
+[OK] '+42-'
+[OK] '-42+'
+[OK] '  +'
+[OK] '  -'
+[OK] '2147483649'
+[OK] '-2147483650'
+[OK] '999999999999999999999999999'
+[OK] '-999999999999999999999999999'
+[OK] '1,2,3'
+[OK] '1;2;3'
+[OK] '1:2:3'
+[OK] '1\t2\t3'
+[OK] 'abc123'
+[OK] '123abc'
+[OK] '1--2'
+[OK] '1++2'
+[OK] '+ 1'
+[OK] '- 1'
+
+========================================
+DUPLICATE TORTURE TESTS
+========================================
+[OK] '0 0'
+[OK] '-0 0'
+[OK] '+0 0'
+[OK] '01 1'
+[OK] '001 1'
+[OK] '0001 1'
+[OK] '42 042'
+[OK] '42 00042'
+[OK] '-01 -1'
+[OK] '2147483647 2147483647'
+[OK] '-2147483648 -2147483648'
+
+========================================
+Bench error test
+========================================
+[OK] '--'
+[OK] '--hello'
+[OK] '--unknown'
+[OK] '--bench --hello 3 2 1'
+[OK] '--1'
+[OK] '--123'
+[OK] '--complexe'
+[OK] '--benchh'
+[OK] '--adapt'
+
+========================================
+FLAGS TESTS
+========================================
+[OK] --adaptative 3 2 1
+[OK] --simple 3 2 1
+[OK] --medium 3 2 1
+[OK] --complex 3 2 1
+[OK] --bonus 3 2 1
+[OK] --bench 3 2 1
+[OK] --bench --adaptative 3 2 1
+[OK] --bench --simple 3 2 1
+[OK] --bench --medium 3 2 1
+[OK] --bench --complex 3 2 1
+[OK] --bench --bonus 3 2 1
+[OK] --simple --complex 3 2 1
+[OK] --adaptative --bonus 3 2 1
+
+========================================
+EDGE CASES
+========================================
+[EMPTY]
+
+[ALREADY SORTED]
+1 2 3 4 5
+Operations: 0
+
+[REVERSE SORTED]
+5 4 3 2 1
+Operations: 9
+
+[SINGLE NUMBER]
+42
+Operations: 0
+
+[TWO SORTED]
+1 2
+Operations: 0
+
+[TWO REVERSED]
+2 1
+Operations: 1
+
+[THREE NUMBERS]
+2 3 1
+Operations: 1
+
+[FOUR NUMBERS]
+4 2 1 3
+Operations: 4
+
+[FIVE NUMBERS]
+5 1 4 2 3
+Operations: 7
+
+[NEGATIVES]
+-5 -9 12 0 42
+Operations: 15
+
+[INT LIMITS]
+-2147483648 2147483647 0
+Operations: 9
+
+
+========================================
+NEARLY SORTED
+========================================
+1 2 3 4 5 6 7 8 10 9
+Operations: 19
+
+1 2 3 4 5 7 6 8 9 10
+Operations: 20
+
+
+========================================
+Random tests (3 numbers)
+========================================
+Progress: 1/100Progress: 2/100Progress: 3/100Progress: 4/100Progress: 5/100Progress: 6/100Progress: 7/100Progress: 8/100Progress: 9/100Progress: 10/100Progress: 11/100Progress: 12/100Progress: 13/100Progress: 14/100Progress: 15/100Progress: 16/100Progress: 17/100Progress: 18/100Progress: 19/100Progress: 20/100Progress: 21/100Progress: 22/100Progress: 23/100Progress: 24/100Progress: 25/100Progress: 26/100Progress: 27/100Progress: 28/100Progress: 29/100Progress: 30/100Progress: 31/100Progress: 32/100Progress: 33/100Progress: 34/100Progress: 35/100Progress: 36/100Progress: 37/100Progress: 38/100Progress: 39/100Progress: 40/100Progress: 41/100Progress: 42/100Progress: 43/100Progress: 44/100Progress: 45/100Progress: 46/100Progress: 47/100Progress: 48/100Progress: 49/100Progress: 50/100Progress: 51/100Progress: 52/100Progress: 53/100Progress: 54/100Progress: 55/100Progress: 56/100Progress: 57/100Progress: 58/100Progress: 59/100Progress: 60/100Progress: 61/100Progress: 62/100Progress: 63/100Progress: 64/100Progress: 65/100Progress: 66/100Progress: 67/100Progress: 68/100Progress: 69/100Progress: 70/100Progress: 71/100Progress: 72/100Progress: 73/100Progress: 74/100Progress: 75/100Progress: 76/100Progress: 77/100Progress: 78/100Progress: 79/100Progress: 80/100Progress: 81/100Progress: 82/100Progress: 83/100Progress: 84/100Progress: 85/100Progress: 86/100Progress: 87/100Progress: 88/100Progress: 89/100Progress: 90/100Progress: 91/100Progress: 92/100Progress: 93/100Progress: 94/100Progress: 95/100Progress: 96/100Progress: 97/100Progress: 98/100Progress: 99/100Progress: 100/100
+
+========================================
+Random tests (5 numbers)
+========================================
+Progress: 1/100Progress: 2/100Progress: 3/100Progress: 4/100Progress: 5/100Progress: 6/100Progress: 7/100Progress: 8/100Progress: 9/100Progress: 10/100Progress: 11/100Progress: 12/100Progress: 13/100Progress: 14/100Progress: 15/100Progress: 16/100Progress: 17/100Progress: 18/100Progress: 19/100Progress: 20/100Progress: 21/100Progress: 22/100Progress: 23/100Progress: 24/100Progress: 25/100Progress: 26/100Progress: 27/100Progress: 28/100Progress: 29/100Progress: 30/100Progress: 31/100Progress: 32/100Progress: 33/100Progress: 34/100Progress: 35/100Progress: 36/100Progress: 37/100Progress: 38/100Progress: 39/100Progress: 40/100Progress: 41/100Progress: 42/100Progress: 43/100Progress: 44/100Progress: 45/100Progress: 46/100Progress: 47/100Progress: 48/100Progress: 49/100Progress: 50/100Progress: 51/100Progress: 52/100Progress: 53/100Progress: 54/100Progress: 55/100Progress: 56/100Progress: 57/100Progress: 58/100Progress: 59/100Progress: 60/100Progress: 61/100Progress: 62/100Progress: 63/100Progress: 64/100Progress: 65/100Progress: 66/100Progress: 67/100Progress: 68/100Progress: 69/100Progress: 70/100Progress: 71/100Progress: 72/100Progress: 73/100Progress: 74/100Progress: 75/100Progress: 76/100Progress: 77/100Progress: 78/100Progress: 79/100Progress: 80/100Progress: 81/100Progress: 82/100Progress: 83/100Progress: 84/100Progress: 85/100Progress: 86/100Progress: 87/100Progress: 88/100Progress: 89/100Progress: 90/100Progress: 91/100Progress: 92/100Progress: 93/100Progress: 94/100Progress: 95/100Progress: 96/100Progress: 97/100Progress: 98/100Progress: 99/100Progress: 100/100
+
+========================================
+Random tests (10 numbers)
+========================================
+Progress: 1/100Progress: 2/100Progress: 3/100Progress: 4/100Progress: 5/100Progress: 6/100Progress: 7/100Progress: 8/100Progress: 9/100Progress: 10/100Progress: 11/100Progress: 12/100Progress: 13/100Progress: 14/100Progress: 15/100Progress: 16/100Progress: 17/100Progress: 18/100Progress: 19/100Progress: 20/100Progress: 21/100Progress: 22/100Progress: 23/100Progress: 24/100Progress: 25/100Progress: 26/100Progress: 27/100Progress: 28/100Progress: 29/100Progress: 30/100Progress: 31/100Progress: 32/100Progress: 33/100Progress: 34/100Progress: 35/100Progress: 36/100Progress: 37/100Progress: 38/100Progress: 39/100Progress: 40/100Progress: 41/100Progress: 42/100Progress: 43/100Progress: 44/100Progress: 45/100Progress: 46/100Progress: 47/100Progress: 48/100Progress: 49/100Progress: 50/100Progress: 51/100Progress: 52/100Progress: 53/100Progress: 54/100Progress: 55/100Progress: 56/100Progress: 57/100Progress: 58/100Progress: 59/100Progress: 60/100Progress: 61/100Progress: 62/100Progress: 63/100Progress: 64/100Progress: 65/100Progress: 66/100Progress: 67/100Progress: 68/100Progress: 69/100Progress: 70/100Progress: 71/100Progress: 72/100Progress: 73/100Progress: 74/100Progress: 75/100Progress: 76/100Progress: 77/100Progress: 78/100Progress: 79/100Progress: 80/100Progress: 81/100Progress: 82/100Progress: 83/100Progress: 84/100Progress: 85/100Progress: 86/100Progress: 87/100Progress: 88/100Progress: 89/100Progress: 90/100Progress: 91/100Progress: 92/100Progress: 93/100Progress: 94/100Progress: 95/100Progress: 96/100Progress: 97/100Progress: 98/100Progress: 99/100Progress: 100/100
+
+========================================
+Random tests (50 numbers)
+========================================
+Progress: 1/200Progress: 2/200Progress: 3/200Progress: 4/200Progress: 5/200Progress: 6/200Progress: 7/200Progress: 8/200Progress: 9/200Progress: 10/200Progress: 11/200Progress: 12/200Progress: 13/200Progress: 14/200Progress: 15/200Progress: 16/200Progress: 17/200Progress: 18/200Progress: 19/200Progress: 20/200Progress: 21/200Progress: 22/200Progress: 23/200Progress: 24/200Progress: 25/200Progress: 26/200Progress: 27/200Progress: 28/200Progress: 29/200Progress: 30/200Progress: 31/200Progress: 32/200Progress: 33/200Progress: 34/200Progress: 35/200Progress: 36/200Progress: 37/200Progress: 38/200Progress: 39/200Progress: 40/200Progress: 41/200Progress: 42/200Progress: 43/200Progress: 44/200Progress: 45/200Progress: 46/200Progress: 47/200Progress: 48/200Progress: 49/200Progress: 50/200Progress: 51/200Progress: 52/200Progress: 53/200Progress: 54/200Progress: 55/200Progress: 56/200Progress: 57/200Progress: 58/200Progress: 59/200Progress: 60/200Progress: 61/200Progress: 62/200Progress: 63/200Progress: 64/200Progress: 65/200Progress: 66/200Progress: 67/200Progress: 68/200Progress: 69/200Progress: 70/200Progress: 71/200Progress: 72/200Progress: 73/200Progress: 74/200Progress: 75/200Progress: 76/200Progress: 77/200Progress: 78/200Progress: 79/200Progress: 80/200Progress: 81/200Progress: 82/200Progress: 83/200Progress: 84/200Progress: 85/200Progress: 86/200Progress: 87/200Progress: 88/200Progress: 89/200Progress: 90/200Progress: 91/200Progress: 92/200Progress: 93/200Progress: 94/200Progress: 95/200Progress: 96/200Progress: 97/200Progress: 98/200Progress: 99/200Progress: 100/200Progress: 101/200Progress: 102/200Progress: 103/200Progress: 104/200Progress: 105/200Progress: 106/200Progress: 107/200Progress: 108/200Progress: 109/200Progress: 110/200Progress: 111/200Progress: 112/200Progress: 113/200Progress: 114/200Progress: 115/200Progress: 116/200Progress: 117/200Progress: 118/200Progress: 119/200Progress: 120/200Progress: 121/200Progress: 122/200Progress: 123/200Progress: 124/200Progress: 125/200Progress: 126/200Progress: 127/200Progress: 128/200Progress: 129/200Progress: 130/200Progress: 131/200Progress: 132/200Progress: 133/200Progress: 134/200Progress: 135/200Progress: 136/200Progress: 137/200Progress: 138/200Progress: 139/200Progress: 140/200Progress: 141/200Progress: 142/200Progress: 143/200Progress: 144/200Progress: 145/200Progress: 146/200Progress: 147/200Progress: 148/200Progress: 149/200Progress: 150/200Progress: 151/200Progress: 152/200Progress: 153/200Progress: 154/200Progress: 155/200Progress: 156/200Progress: 157/200Progress: 158/200Progress: 159/200Progress: 160/200Progress: 161/200Progress: 162/200Progress: 163/200Progress: 164/200Progress: 165/200Progress: 166/200Progress: 167/200Progress: 168/200Progress: 169/200Progress: 170/200Progress: 171/200Progress: 172/200Progress: 173/200Progress: 174/200Progress: 175/200Progress: 176/200Progress: 177/200Progress: 178/200Progress: 179/200Progress: 180/200Progress: 181/200Progress: 182/200Progress: 183/200Progress: 184/200Progress: 185/200Progress: 186/200Progress: 187/200Progress: 188/200Progress: 189/200Progress: 190/200Progress: 191/200Progress: 192/200Progress: 193/200Progress: 194/200Progress: 195/200Progress: 196/200Progress: 197/200Progress: 198/200Progress: 199/200Progress: 200/200
+
+========================================
+Random tests (100 numbers)
+========================================
+Progress: 1/1000Progress: 2/1000Progress: 3/1000Progress: 4/1000Progress: 5/1000Progress: 6/1000Progress: 7/1000Progress: 8/1000Progress: 9/1000Progress: 10/1000Progress: 11/1000Progress: 12/1000Progress: 13/1000Progress: 14/1000Progress: 15/1000Progress: 16/1000Progress: 17/1000Progress: 18/1000Progress: 19/1000Progress: 20/1000Progress: 21/1000Progress: 22/1000Progress: 23/1000Progress: 24/1000Progress: 25/1000Progress: 26/1000Progress: 27/1000Progress: 28/1000Progress: 29/1000Progress: 30/1000Progress: 31/1000Progress: 32/1000Progress: 33/1000Progress: 34/1000Progress: 35/1000Progress: 36/1000Progress: 37/1000Progress: 38/1000Progress: 39/1000Progress: 40/1000Progress: 41/1000Progress: 42/1000Progress: 43/1000Progress: 44/1000Progress: 45/1000Progress: 46/1000Progress: 47/1000Progress: 48/1000Progress: 49/1000Progress: 50/1000Progress: 51/1000Progress: 52/1000Progress: 53/1000Progress: 54/1000Progress: 55/1000Progress: 56/1000Progress: 57/1000Progress: 58/1000Progress: 59/1000Progress: 60/1000Progress: 61/1000Progress: 62/1000Progress: 63/1000Progress: 64/1000Progress: 65/1000Progress: 66/1000Progress: 67/1000Progress: 68/1000Progress: 69/1000Progress: 70/1000Progress: 71/1000Progress: 72/1000Progress: 73/1000Progress: 74/1000Progress: 75/1000Progress: 76/1000Progress: 77/1000Progress: 78/1000Progress: 79/1000Progress: 80/1000Progress: 81/1000Progress: 82/1000Progress: 83/1000Progress: 84/1000Progress: 85/1000Progress: 86/1000Progress: 87/1000Progress: 88/1000Progress: 89/1000Progress: 90/1000Progress: 91/1000Progress: 92/1000Progress: 93/1000Progress: 94/1000Progress: 95/1000Progress: 96/1000Progress: 97/1000Progress: 98/1000Progress: 99/1000Progress: 100/1000Progress: 101/1000Progress: 102/1000Progress: 103/1000Progress: 104/1000Progress: 105/1000Progress: 106/1000Progress: 107/1000Progress: 108/1000Progress: 109/1000Progress: 110/1000Progress: 111/1000Progress: 112/1000Progress: 113/1000Progress: 114/1000Progress: 115/1000Progress: 116/1000Progress: 117/1000Progress: 118/1000Progress: 119/1000Progress: 120/1000Progress: 121/1000Progress: 122/1000Progress: 123/1000Progress: 124/1000Progress: 125/1000Progress: 126/1000Progress: 127/1000Progress: 128/1000Progress: 129/1000Progress: 130/1000Progress: 131/1000Progress: 132/1000Progress: 133/1000Progress: 134/1000Progress: 135/1000Progress: 136/1000Progress: 137/1000Progress: 138/1000Progress: 139/1000Progress: 140/1000Progress: 141/1000Progress: 142/1000Progress: 143/1000Progress: 144/1000Progress: 145/1000Progress: 146/1000Progress: 147/1000Progress: 148/1000Progress: 149/1000Progress: 150/1000Progress: 151/1000Progress: 152/1000Progress: 153/1000Progress: 154/1000Progress: 155/1000Progress: 156/1000Progress: 157/1000Progress: 158/1000Progress: 159/1000Progress: 160/1000Progress: 161/1000Progress: 162/1000Progress: 163/1000Progress: 164/1000Progress: 165/1000Progress: 166/1000Progress: 167/1000Progress: 168/1000Progress: 169/1000Progress: 170/1000Progress: 171/1000Progress: 172/1000Progress: 173/1000Progress: 174/1000Progress: 175/1000Progress: 176/1000Progress: 177/1000Progress: 178/1000Progress: 179/1000Progress: 180/1000Progress: 181/1000Progress: 182/1000Progress: 183/1000Progress: 184/1000Progress: 185/1000Progress: 186/1000Progress: 187/1000Progress: 188/1000Progress: 189/1000Progress: 190/1000Progress: 191/1000Progress: 192/1000Progress: 193/1000Progress: 194/1000Progress: 195/1000Progress: 196/1000Progress: 197/1000Progress: 198/1000Progress: 199/1000Progress: 200/1000Progress: 201/1000Progress: 202/1000Progress: 203/1000Progress: 204/1000Progress: 205/1000Progress: 206/1000Progress: 207/1000Progress: 208/1000Progress: 209/1000Progress: 210/1000Progress: 211/1000Progress: 212/1000Progress: 213/1000Progress: 214/1000Progress: 215/1000Progress: 216/1000Progress: 217/1000Progress: 218/1000Progress: 219/1000Progress: 220/1000Progress: 221/1000Progress: 222/1000Progress: 223/1000Progress: 224/1000Progress: 225/1000Progress: 226/1000Progress: 227/1000Progress: 228/1000Progress: 229/1000Progress: 230/1000Progress: 231/1000Progress: 232/1000Progress: 233/1000Progress: 234/1000Progress: 235/1000Progress: 236/1000Progress: 237/1000Progress: 238/1000Progress: 239/1000Progress: 240/1000Progress: 241/1000Progress: 242/1000Progress: 243/1000Progress: 244/1000Progress: 245/1000Progress: 246/1000Progress: 247/1000Progress: 248/1000Progress: 249/1000Progress: 250/1000Progress: 251/1000Progress: 252/1000Progress: 253/1000Progress: 254/1000Progress: 255/1000Progress: 256/1000Progress: 257/1000Progress: 258/1000Progress: 259/1000Progress: 260/1000Progress: 261/1000Progress: 262/1000Progress: 263/1000Progress: 264/1000Progress: 265/1000Progress: 266/1000Progress: 267/1000Progress: 268/1000Progress: 269/1000Progress: 270/1000Progress: 271/1000Progress: 272/1000Progress: 273/1000Progress: 274/1000Progress: 275/1000Progress: 276/1000Progress: 277/1000Progress: 278/1000Progress: 279/1000Progress: 280/1000Progress: 281/1000Progress: 282/1000Progress: 283/1000Progress: 284/1000Progress: 285/1000Progress: 286/1000Progress: 287/1000Progress: 288/1000Progress: 289/1000Progress: 290/1000Progress: 291/1000Progress: 292/1000Progress: 293/1000Progress: 294/1000Progress: 295/1000Progress: 296/1000Progress: 297/1000Progress: 298/1000Progress: 299/1000Progress: 300/1000Progress: 301/1000Progress: 302/1000Progress: 303/1000Progress: 304/1000Progress: 305/1000Progress: 306/1000Progress: 307/1000Progress: 308/1000Progress: 309/1000Progress: 310/1000Progress: 311/1000Progress: 312/1000Progress: 313/1000Progress: 314/1000Progress: 315/1000Progress: 316/1000Progress: 317/1000Progress: 318/1000Progress: 319/1000Progress: 320/1000Progress: 321/1000Progress: 322/1000Progress: 323/1000Progress: 324/1000Progress: 325/1000Progress: 326/1000Progress: 327/1000Progress: 328/1000Progress: 329/1000Progress: 330/1000Progress: 331/1000Progress: 332/1000Progress: 333/1000Progress: 334/1000Progress: 335/1000Progress: 336/1000Progress: 337/1000Progress: 338/1000Progress: 339/1000Progress: 340/1000Progress: 341/1000Progress: 342/1000Progress: 343/1000Progress: 344/1000Progress: 345/1000Progress: 346/1000Progress: 347/1000Progress: 348/1000Progress: 349/1000Progress: 350/1000Progress: 351/1000Progress: 352/1000Progress: 353/1000Progress: 354/1000Progress: 355/1000Progress: 356/1000Progress: 357/1000Progress: 358/1000Progress: 359/1000Progress: 360/1000Progress: 361/1000Progress: 362/1000Progress: 363/1000Progress: 364/1000Progress: 365/1000Progress: 366/1000Progress: 367/1000Progress: 368/1000Progress: 369/1000Progress: 370/1000Progress: 371/1000Progress: 372/1000Progress: 373/1000Progress: 374/1000Progress: 375/1000Progress: 376/1000Progress: 377/1000Progress: 378/1000Progress: 379/1000Progress: 380/1000Progress: 381/1000Progress: 382/1000Progress: 383/1000Progress: 384/1000Progress: 385/1000Progress: 386/1000Progress: 387/1000Progress: 388/1000Progress: 389/1000Progress: 390/1000Progress: 391/1000Progress: 392/1000Progress: 393/1000Progress: 394/1000Progress: 395/1000Progress: 396/1000Progress: 397/1000Progress: 398/1000Progress: 399/1000Progress: 400/1000Progress: 401/1000Progress: 402/1000Progress: 403/1000Progress: 404/1000Progress: 405/1000Progress: 406/1000Progress: 407/1000Progress: 408/1000Progress: 409/1000Progress: 410/1000Progress: 411/1000Progress: 412/1000Progress: 413/1000Progress: 414/1000Progress: 415/1000Progress: 416/1000Progress: 417/1000Progress: 418/1000Progress: 419/1000Progress: 420/1000Progress: 421/1000Progress: 422/1000Progress: 423/1000Progress: 424/1000Progress: 425/1000Progress: 426/1000Progress: 427/1000Progress: 428/1000Progress: 429/1000Progress: 430/1000Progress: 431/1000Progress: 432/1000Progress: 433/1000Progress: 434/1000Progress: 435/1000Progress: 436/1000Progress: 437/1000Progress: 438/1000Progress: 439/1000Progress: 440/1000Progress: 441/1000Progress: 442/1000Progress: 443/1000Progress: 444/1000Progress: 445/1000Progress: 446/1000Progress: 447/1000Progress: 448/1000Progress: 449/1000Progress: 450/1000Progress: 451/1000Progress: 452/1000Progress: 453/1000Progress: 454/1000Progress: 455/1000Progress: 456/1000Progress: 457/1000Progress: 458/1000Progress: 459/1000Progress: 460/1000Progress: 461/1000Progress: 462/1000Progress: 463/1000Progress: 464/1000Progress: 465/1000Progress: 466/1000Progress: 467/1000Progress: 468/1000Progress: 469/1000Progress: 470/1000Progress: 471/1000Progress: 472/1000Progress: 473/1000Progress: 474/1000Progress: 475/1000Progress: 476/1000Progress: 477/1000Progress: 478/1000Progress: 479/1000Progress: 480/1000Progress: 481/1000Progress: 482/1000Progress: 483/1000Progress: 484/1000Progress: 485/1000Progress: 486/1000Progress: 487/1000Progress: 488/1000Progress: 489/1000Progress: 490/1000Progress: 491/1000Progress: 492/1000Progress: 493/1000Progress: 494/1000Progress: 495/1000Progress: 496/1000Progress: 497/1000Progress: 498/1000Progress: 499/1000Progress: 500/1000Progress: 501/1000Progress: 502/1000Progress: 503/1000Progress: 504/1000Progress: 505/1000Progress: 506/1000Progress: 507/1000Progress: 508/1000Progress: 509/1000Progress: 510/1000Progress: 511/1000Progress: 512/1000Progress: 513/1000Progress: 514/1000Progress: 515/1000Progress: 516/1000Progress: 517/1000Progress: 518/1000Progress: 519/1000Progress: 520/1000Progress: 521/1000Progress: 522/1000Progress: 523/1000Progress: 524/1000Progress: 525/1000Progress: 526/1000Progress: 527/1000Progress: 528/1000Progress: 529/1000Progress: 530/1000Progress: 531/1000Progress: 532/1000Progress: 533/1000Progress: 534/1000Progress: 535/1000Progress: 536/1000Progress: 537/1000Progress: 538/1000Progress: 539/1000Progress: 540/1000Progress: 541/1000Progress: 542/1000Progress: 543/1000Progress: 544/1000Progress: 545/1000Progress: 546/1000Progress: 547/1000Progress: 548/1000Progress: 549/1000Progress: 550/1000Progress: 551/1000Progress: 552/1000Progress: 553/1000Progress: 554/1000Progress: 555/1000Progress: 556/1000Progress: 557/1000Progress: 558/1000Progress: 559/1000Progress: 560/1000Progress: 561/1000Progress: 562/1000Progress: 563/1000Progress: 564/1000Progress: 565/1000Progress: 566/1000Progress: 567/1000Progress: 568/1000Progress: 569/1000Progress: 570/1000Progress: 571/1000Progress: 572/1000Progress: 573/1000Progress: 574/1000Progress: 575/1000Progress: 576/1000Progress: 577/1000Progress: 578/1000Progress: 579/1000Progress: 580/1000Progress: 581/1000Progress: 582/1000Progress: 583/1000Progress: 584/1000Progress: 585/1000Progress: 586/1000Progress: 587/1000Progress: 588/1000Progress: 589/1000Progress: 590/1000Progress: 591/1000Progress: 592/1000Progress: 593/1000Progress: 594/1000Progress: 595/1000Progress: 596/1000Progress: 597/1000Progress: 598/1000Progress: 599/1000Progress: 600/1000Progress: 601/1000Progress: 602/1000Progress: 603/1000Progress: 604/1000Progress: 605/1000Progress: 606/1000Progress: 607/1000Progress: 608/1000Progress: 609/1000Progress: 610/1000Progress: 611/1000Progress: 612/1000Progress: 613/1000Progress: 614/1000Progress: 615/1000Progress: 616/1000Progress: 617/1000Progress: 618/1000Progress: 619/1000Progress: 620/1000Progress: 621/1000Progress: 622/1000Progress: 623/1000Progress: 624/1000Progress: 625/1000Progress: 626/1000Progress: 627/1000Progress: 628/1000Progress: 629/1000Progress: 630/1000Progress: 631/1000Progress: 632/1000Progress: 633/1000Progress: 634/1000Progress: 635/1000Progress: 636/1000Progress: 637/1000Progress: 638/1000Progress: 639/1000Progress: 640/1000Progress: 641/1000Progress: 642/1000Progress: 643/1000Progress: 644/1000Progress: 645/1000Progress: 646/1000Progress: 647/1000Progress: 648/1000Progress: 649/1000Progress: 650/1000Progress: 651/1000Progress: 652/1000Progress: 653/1000Progress: 654/1000Progress: 655/1000Progress: 656/1000Progress: 657/1000Progress: 658/1000Progress: 659/1000Progress: 660/1000Progress: 661/1000Progress: 662/1000Progress: 663/1000Progress: 664/1000Progress: 665/1000Progress: 666/1000Progress: 667/1000Progress: 668/1000Progress: 669/1000Progress: 670/1000Progress: 671/1000Progress: 672/1000Progress: 673/1000Progress: 674/1000Progress: 675/1000Progress: 676/1000Progress: 677/1000Progress: 678/1000Progress: 679/1000Progress: 680/1000Progress: 681/1000Progress: 682/1000Progress: 683/1000Progress: 684/1000Progress: 685/1000Progress: 686/1000Progress: 687/1000Progress: 688/1000Progress: 689/1000Progress: 690/1000Progress: 691/1000Progress: 692/1000Progress: 693/1000Progress: 694/1000Progress: 695/1000Progress: 696/1000Progress: 697/1000Progress: 698/1000Progress: 699/1000Progress: 700/1000Progress: 701/1000Progress: 702/1000Progress: 703/1000Progress: 704/1000Progress: 705/1000Progress: 706/1000Progress: 707/1000Progress: 708/1000Progress: 709/1000Progress: 710/1000Progress: 711/1000Progress: 712/1000Progress: 713/1000Progress: 714/1000Progress: 715/1000Progress: 716/1000Progress: 717/1000Progress: 718/1000Progress: 719/1000Progress: 720/1000Progress: 721/1000Progress: 722/1000Progress: 723/1000Progress: 724/1000Progress: 725/1000Progress: 726/1000Progress: 727/1000Progress: 728/1000Progress: 729/1000Progress: 730/1000Progress: 731/1000Progress: 732/1000Progress: 733/1000Progress: 734/1000Progress: 735/1000Progress: 736/1000Progress: 737/1000Progress: 738/1000Progress: 739/1000Progress: 740/1000Progress: 741/1000Progress: 742/1000Progress: 743/1000Progress: 744/1000Progress: 745/1000Progress: 746/1000Progress: 747/1000Progress: 748/1000Progress: 749/1000Progress: 750/1000Progress: 751/1000Progress: 752/1000Progress: 753/1000Progress: 754/1000Progress: 755/1000Progress: 756/1000Progress: 757/1000Progress: 758/1000Progress: 759/1000Progress: 760/1000Progress: 761/1000Progress: 762/1000Progress: 763/1000Progress: 764/1000Progress: 765/1000Progress: 766/1000Progress: 767/1000Progress: 768/1000Progress: 769/1000Progress: 770/1000Progress: 771/1000Progress: 772/1000Progress: 773/1000Progress: 774/1000Progress: 775/1000Progress: 776/1000Progress: 777/1000Progress: 778/1000Progress: 779/1000Progress: 780/1000Progress: 781/1000Progress: 782/1000Progress: 783/1000Progress: 784/1000Progress: 785/1000Progress: 786/1000Progress: 787/1000Progress: 788/1000Progress: 789/1000Progress: 790/1000Progress: 791/1000Progress: 792/1000Progress: 793/1000Progress: 794/1000Progress: 795/1000Progress: 796/1000Progress: 797/1000Progress: 798/1000Progress: 799/1000Progress: 800/1000Progress: 801/1000Progress: 802/1000Progress: 803/1000Progress: 804/1000Progress: 805/1000Progress: 806/1000Progress: 807/1000Progress: 808/1000Progress: 809/1000Progress: 810/1000Progress: 811/1000Progress: 812/1000Progress: 813/1000Progress: 814/1000Progress: 815/1000Progress: 816/1000Progress: 817/1000Progress: 818/1000Progress: 819/1000Progress: 820/1000Progress: 821/1000Progress: 822/1000Progress: 823/1000Progress: 824/1000Progress: 825/1000Progress: 826/1000Progress: 827/1000Progress: 828/1000Progress: 829/1000Progress: 830/1000Progress: 831/1000Progress: 832/1000Progress: 833/1000Progress: 834/1000Progress: 835/1000Progress: 836/1000Progress: 837/1000Progress: 838/1000Progress: 839/1000Progress: 840/1000Progress: 841/1000Progress: 842/1000Progress: 843/1000Progress: 844/1000Progress: 845/1000Progress: 846/1000Progress: 847/1000Progress: 848/1000Progress: 849/1000Progress: 850/1000Progress: 851/1000Progress: 852/1000Progress: 853/1000Progress: 854/1000Progress: 855/1000Progress: 856/1000Progress: 857/1000Progress: 858/1000Progress: 859/1000Progress: 860/1000Progress: 861/1000Progress: 862/1000Progress: 863/1000Progress: 864/1000Progress: 865/1000Progress: 866/1000Progress: 867/1000Progress: 868/1000Progress: 869/1000Progress: 870/1000Progress: 871/1000Progress: 872/1000Progress: 873/1000Progress: 874/1000Progress: 875/1000Progress: 876/1000Progress: 877/1000Progress: 878/1000Progress: 879/1000Progress: 880/1000Progress: 881/1000Progress: 882/1000Progress: 883/1000Progress: 884/1000Progress: 885/1000Progress: 886/1000Progress: 887/1000Progress: 888/1000Progress: 889/1000Progress: 890/1000Progress: 891/1000Progress: 892/1000Progress: 893/1000Progress: 894/1000Progress: 895/1000Progress: 896/1000Progress: 897/1000Progress: 898/1000Progress: 899/1000Progress: 900/1000Progress: 901/1000Progress: 902/1000Progress: 903/1000Progress: 904/1000Progress: 905/1000Progress: 906/1000Progress: 907/1000Progress: 908/1000Progress: 909/1000Progress: 910/1000Progress: 911/1000Progress: 912/1000Progress: 913/1000Progress: 914/1000Progress: 915/1000Progress: 916/1000Progress: 917/1000Progress: 918/1000Progress: 919/1000Progress: 920/1000Progress: 921/1000Progress: 922/1000Progress: 923/1000Progress: 924/1000Progress: 925/1000Progress: 926/1000Progress: 927/1000Progress: 928/1000Progress: 929/1000Progress: 930/1000Progress: 931/1000Progress: 932/1000Progress: 933/1000Progress: 934/1000Progress: 935/1000Progress: 936/1000Progress: 937/1000Progress: 938/1000Progress: 939/1000Progress: 940/1000Progress: 941/1000Progress: 942/1000Progress: 943/1000Progress: 944/1000Progress: 945/1000Progress: 946/1000Progress: 947/1000Progress: 948/1000Progress: 949/1000Progress: 950/1000Progress: 951/1000Progress: 952/1000Progress: 953/1000Progress: 954/1000Progress: 955/1000Progress: 956/1000Progress: 957/1000Progress: 958/1000Progress: 959/1000Progress: 960/1000Progress: 961/1000Progress: 962/1000Progress: 963/1000Progress: 964/1000Progress: 965/1000Progress: 966/1000Progress: 967/1000Progress: 968/1000Progress: 969/1000Progress: 970/1000Progress: 971/1000Progress: 972/1000Progress: 973/1000Progress: 974/1000Progress: 975/1000Progress: 976/1000Progress: 977/1000Progress: 978/1000Progress: 979/1000Progress: 980/1000Progress: 981/1000Progress: 982/1000Progress: 983/1000Progress: 984/1000Progress: 985/1000Progress: 986/1000Progress: 987/1000Progress: 988/1000Progress: 989/1000Progress: 990/1000Progress: 991/1000Progress: 992/1000Progress: 993/1000Progress: 994/1000Progress: 995/1000Progress: 996/1000Progress: 997/1000Progress: 998/1000Progress: 999/1000Progress: 1000/1000
+
+========================================
+Random tests (500 numbers)
+========================================
+Progress: 1/200Progress: 2/200Progress: 3/200Progress: 4/200Progress: 5/200Progress: 6/200Progress: 7/200Progress: 8/200Progress: 9/200Progress: 10/200Progress: 11/200Progress: 12/200Progress: 13/200Progress: 14/200Progress: 15/200Progress: 16/200Progress: 17/200Progress: 18/200Progress: 19/200Progress: 20/200Progress: 21/200Progress: 22/200Progress: 23/200Progress: 24/200Progress: 25/200Progress: 26/200Progress: 27/200Progress: 28/200Progress: 29/200Progress: 30/200Progress: 31/200Progress: 32/200Progress: 33/200Progress: 34/200Progress: 35/200Progress: 36/200Progress: 37/200Progress: 38/200Progress: 39/200Progress: 40/200Progress: 41/200Progress: 42/200Progress: 43/200Progress: 44/200Progress: 45/200Progress: 46/200Progress: 47/200Progress: 48/200Progress: 49/200Progress: 50/200Progress: 51/200Progress: 52/200Progress: 53/200Progress: 54/200Progress: 55/200Progress: 56/200Progress: 57/200Progress: 58/200Progress: 59/200Progress: 60/200Progress: 61/200Progress: 62/200Progress: 63/200Progress: 64/200Progress: 65/200Progress: 66/200Progress: 67/200Progress: 68/200Progress: 69/200Progress: 70/200Progress: 71/200Progress: 72/200Progress: 73/200Progress: 74/200Progress: 75/200Progress: 76/200Progress: 77/200Progress: 78/200Progress: 79/200Progress: 80/200Progress: 81/200Progress: 82/200Progress: 83/200Progress: 84/200Progress: 85/200Progress: 86/200Progress: 87/200Progress: 88/200Progress: 89/200Progress: 90/200Progress: 91/200Progress: 92/200Progress: 93/200Progress: 94/200Progress: 95/200Progress: 96/200Progress: 97/200Progress: 98/200Progress: 99/200Progress: 100/200Progress: 101/200Progress: 102/200Progress: 103/200Progress: 104/200Progress: 105/200Progress: 106/200Progress: 107/200Progress: 108/200Progress: 109/200Progress: 110/200Progress: 111/200Progress: 112/200Progress: 113/200Progress: 114/200Progress: 115/200Progress: 116/200Progress: 117/200Progress: 118/200Progress: 119/200Progress: 120/200Progress: 121/200Progress: 122/200Progress: 123/200Progress: 124/200Progress: 125/200Progress: 126/200Progress: 127/200Progress: 128/200Progress: 129/200Progress: 130/200Progress: 131/200Progress: 132/200Progress: 133/200Progress: 134/200Progress: 135/200Progress: 136/200Progress: 137/200Progress: 138/200Progress: 139/200Progress: 140/200Progress: 141/200Progress: 142/200Progress: 143/200Progress: 144/200Progress: 145/200Progress: 146/200Progress: 147/200Progress: 148/200Progress: 149/200Progress: 150/200Progress: 151/200Progress: 152/200Progress: 153/200Progress: 154/200Progress: 155/200Progress: 156/200Progress: 157/200Progress: 158/200Progress: 159/200Progress: 160/200Progress: 161/200Progress: 162/200Progress: 163/200Progress: 164/200Progress: 165/200Progress: 166/200Progress: 167/200Progress: 168/200Progress: 169/200Progress: 170/200Progress: 171/200Progress: 172/200Progress: 173/200Progress: 174/200Progress: 175/200Progress: 176/200Progress: 177/200Progress: 178/200Progress: 179/200Progress: 180/200Progress: 181/200Progress: 182/200Progress: 183/200Progress: 184/200Progress: 185/200Progress: 186/200Progress: 187/200Progress: 188/200Progress: 189/200Progress: 190/200Progress: 191/200Progress: 192/200Progress: 193/200Progress: 194/200Progress: 195/200Progress: 196/200Progress: 197/200Progress: 198/200Progress: 199/200Progress: 200/200
+
+========================================
+BENCH TESTS
+========================================
+[bench] disorder: 52.50%
+[bench] strategy: Adaptive / 0(n log n)
+[bench] total_ops: 588
+[bench] sa: 1 sb: 0 ss: 0 pa: 97 pb: 97 
+[bench] ra: 45 rb: 168 rr: 52 rra: 30 rrb: 52 rrr: 46
+100 numbers
+Score : 588
+<=700 PASS
+
+[bench] disorder: 49.03%
+[bench] strategy: Adaptive / 0(n√n)
+[bench] total_ops: 5699
+[bench] sa: 0 sb: 0 ss: 0 pa: 500 pb: 500 
+[bench] ra: 611 rb: 1209 rr: 0 rra: 1702 rrb: 1177 rrr: 0
+500 numbers
+Score : 5699
+<=7000 PASS
+
+
+========================================
+STATISTICS
+========================================
+Tests performed : 1712
+Average         : 
+Best            : 0
+Worst           : 6016
+
+100 NUMBERS
+>700  : 35
+>900  : 0
+>1100 : 0
+
+500 NUMBERS
+>5500 : 56
+>7000 : 0
+>8500 : 0
+
+========================================
+VALGRIND
+========================================
+==191793== Memcheck, a memory error detector
+==191793== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==191793== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==191793== Command: ./push_swap \ 
+==191793== 
+Error
+==191793== 
+==191793== HEAP SUMMARY:
+==191793==     in use at exit: 0 bytes in 0 blocks
+==191793==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==191793== 
+==191793== All heap blocks were freed -- no leaks are possible
+==191793== 
+==191793== For lists of detected and suppressed errors, rerun with: -s
+==191793== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==191800== Memcheck, a memory error detector
+==191800== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==191800== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==191800== Command: ./push_swap 1 2 2
+==191800== 
+Error
+==191800== 
+==191800== HEAP SUMMARY:
+==191800==     in use at exit: 0 bytes in 0 blocks
+==191800==   total heap usage: 3 allocs, 3 frees, 48 bytes allocated
+==191800== 
+==191800== All heap blocks were freed -- no leaks are possible
+==191800== 
+==191800== For lists of detected and suppressed errors, rerun with: -s
+==191800== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==191801== Memcheck, a memory error detector
+==191801== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==191801== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==191801== Command: ./push_swap --1
+==191801== 
+Error
+==191801== 
+==191801== HEAP SUMMARY:
+==191801==     in use at exit: 0 bytes in 0 blocks
+==191801==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==191801== 
+==191801== All heap blocks were freed -- no leaks are possible
+==191801== 
+==191801== For lists of detected and suppressed errors, rerun with: -s
+==191801== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==191802== Memcheck, a memory error detector
+==191802== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==191802== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==191802== Command: ./push_swap 2147483648
+==191802== 
+Error
+==191802== 
+==191802== HEAP SUMMARY:
+==191802==     in use at exit: 0 bytes in 0 blocks
+==191802==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==191802== 
+==191802== All heap blocks were freed -- no leaks are possible
+==191802== 
+==191802== For lists of detected and suppressed errors, rerun with: -s
+==191802== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==191803== Memcheck, a memory error detector
+==191803== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==191803== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==191803== Command: ./push_swap 5 4 3 2 1
+==191803== 
+==191803== 
+==191803== HEAP SUMMARY:
+==191803==     in use at exit: 0 bytes in 0 blocks
+==191803==   total heap usage: 5 allocs, 5 frees, 80 bytes allocated
+==191803== 
+==191803== All heap blocks were freed -- no leaks are possible
+==191803== 
+==191803== For lists of detected and suppressed errors, rerun with: -s
+==191803== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+No leaks detected
+
+Evaluation complete

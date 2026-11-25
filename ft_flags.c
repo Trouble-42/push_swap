@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/25 08:41:40 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/25 12:42:53 by ajeudy           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_flags.c                                        :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/11/25 08:41:40 by rkraan           #+#    #+#              */
+/*   Updated: 2026/11/25 13:08:08 by rkraan          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,11 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-int	ft_flags(char *argv, int *algo, int *bench)
+int	*ft_flags(char **argv, int *algo, int *bench)
 {
+	int	i;
+
+	i = 0;
 	if (!ft_strcmp(argv[i], "--bench"))
 		*bench = 1;
 	if (!ft_strcmp(argv[i], "--adaptative"))

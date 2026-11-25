@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 NAME = push_swap
 
 SRCS = ft_adaptive.c		\
@@ -14,7 +14,7 @@ SRCS = ft_adaptive.c		\
 	   ft_parsing.c			\
 	   ft_pile_utils.c		\
 	   ft_pilelen.c			\
-	   ft_print_start.c		\
+	   ft_print_strat.c		\
 	   ft_push.c			\
 	   ft_radix.c			\
 	   ft_rank.c			\

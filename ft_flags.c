@@ -6,7 +6,7 @@
 /*   By: ajeudy <ajeudy@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 08:41:40 by ajeudy            #+#    #+#             */
-/*   Updated: 2026/11/25 12:36:12 by ajeudy           ###   ########.fr       */
+/*   Updated: 2026/11/25 12:42:53 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_flags(char *argv, int *algo, int *bench)
 		*algo = 2;
 	else if (!ft_strcmp(argv[i], "--complex"))
 		*algo = 3;
-	else if (!ft_strcmp(argv[i], "--excellent"))
+	else if (!ft_strcmp(argv[i], "--bonus"))
 		*algo = 4;
 	i++;
 	return (algo);

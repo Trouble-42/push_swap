@@ -3,9 +3,14 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = push_swap
 
 SRCS = ft_atoi.c			\
+	   ft_chunk,c			\
+	   ft_chunk_utils.c		\
 	   ft_count.c			\
 	   ft_disorder.c		\
+	   ft_flags.c			\
 	   ft_is_sorted.c		\
+	   ft_parsing.c			\
+	   ft_pile_utils.c		\
 	   ft_pilelen.c			\
 	   ft_push.c			\
 	   ft_radix.c			\
@@ -13,17 +18,13 @@ SRCS = ft_atoi.c			\
 	   ft_reverse_rotate.c	\
 	   ft_rotate.c			\
 	   ft_select.c			\
+	   ft_sort.c			\
 	   ft_sum_total.c		\
 	   ft_swap.c			\
-	   ft_chunk.c			\
-	   ft_chunk_utils.c		\
 	   ft_turk.c			\
-	   ft_turk_utils.c		\
-	   ft_turk_move.c		\
 	   ft_turk_cost.c		\
-	   ft_sort.c 			\
-	   ft_parsing.c			\
-	   ft_pile_utils.c		\
+	   ft_turk_move.c		\
+	   ft_turk_utils.c		\
 	   main.c
 
 OBJS = $(SRCS:.c=.o)

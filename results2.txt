@@ -1,8 +1,8 @@
-Test 1 : 539
-Test 2 : 664
+Test 1 : 591
+Test 2 : 586
 
-Average     : 601.50
-Best        : 539
-Worst       : 664
+Average     : 588.50
+Best        : 586
+Worst       : 591
 > 5500      : 0/2
 Percentage  : 0.00%

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_push_swap.h                                    :+:      :+:    :+:    */
+/*   ft_push_swap.h                                     :+:      :+:    :+:   */
 /*                                                   +:+ +:+         +:+      */
 /*   By: rkraan <ruben.kraan@learner.42.tech>      #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/19 11:10:20 by rkraan           #+#    #+#              */
-/*   Updated: 2026/11/23 14:46:33 by rkraan          ###   ########.fr        */
+/*   Updated: 2026/11/25 11:24:57 by ajeudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,9 @@ void	ft_pileclear(t_pile **p);
 int		ft_has_dup(t_pile *a);
 int		ft_parse(t_pile **a, int argc, char **argv);
 void	ft_sort(t_pile **a, t_pile **b);
+int		ft_strcmp(char *s1, char *s2);
+int		ft_flags(char *argv, int *algo, int *bench);
+int		ft_strat(int algo, t_pile **a, t_pile **b);
+int		ft_adaptative(t_pile **a, t_pile **b);
 
 #endif
